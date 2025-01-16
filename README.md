@@ -54,7 +54,7 @@ Clone the repository:
 
     git clone https://github.com/YYYEJI/AI_ChatBot.git
 
-    cd chatbot
+    cd AI_ChatBot
 
 Install the required libraries:
 
@@ -75,7 +75,7 @@ Open your browser and navigate to:
 저장소를 복제합니다:
 
     git clone https://github.com/YYYEJI/AI_ChatBot.git
-    cd chatbot
+    cd AI_ChatBot
 
 필요한 라이브러리를 설치합니다:
 
