@@ -1,7 +1,7 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static")
 
 # Load model and tokenizer
 model_name = "microsoft/DialoGPT-medium"
@@ -17,20 +17,31 @@ def get_response(user_input):
 
 @app.route("/chat", methods=["GET", "POST"])
 def chat():
+    ai_response = None
     if request.method == "POST":
         user_input = request.form.get("message", "")
-        if not user_input:
-            return "<h3>Please enter a message!</h3>"
-        ai_response = get_response(user_input)
-        return f"<h3>Chatbot Response: {ai_response}</h3><a href='/chat'>Back</a>"
-
-    # Display a simple HTML form for GET requests
-    return '''
-    <form action="/chat" method="post">
-        <label for="message">Enter your message:</label><br>
-        <input type="text" id="message" name="message" required><br><br>
-        <button type="submit">Send</button>
-    </form>
+        if user_input:
+            ai_response = get_response(user_input)
+    
+    return f'''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chatbot</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <form action="/chat" method="post">
+            <label for="message">Enter your message:</label><br>
+            <input type="text" id="message" name="message" required><br><br>
+            <button type="submit">Send</button>
+        </form>
+        {f"<h3>Chatbot Response: {ai_response}</h3>" if ai_response else ""}
+        <a href="/chat">Back</a>
+    </body>
+    </html>
     '''
 
 if __name__ == "__main__":
