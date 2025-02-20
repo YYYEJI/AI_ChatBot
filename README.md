@@ -27,6 +27,7 @@ beginners looking to learn about AI, NLP, and web development.
 ### 🚀 이 프로젝트는 다음을 사용하여 대화형 챗봇을 만드는 방법을 보여줍니다:
 
 🔹 Flask: API 요청을 처리하고 챗봇 인터페이스를 제공하기 위한 Python의 경량 웹 프레임워크.
+
 🔹 Hugging Face Transformers: AI 기반 응답을 생성하기 위해 사전 학습된 언어 모델을 로드하는 라이브러리.
 
 ✨ 챗봇은 사용자 입력에 기반하여 지능형 응답을 제공하며 웹 브라우저를 통해 액세스할 수 있습니다. 이 프로젝트는 AI, 자연어
@@ -37,13 +38,17 @@ ________________________________
 ### 🛠️ Features
 
 🔹 AI Responses: Generates responses using a pretrained conversational model.
+
 🔹 Web Interface: Simple HTML form for easy interaction.
+
 🔹 Customizable: Extendable to add more features or integrate external APIs.
 
 ### 🛠️ 주요 기능
 
 🔹 AI 응답: 사전 학습된 대화 모델을 사용하여 응답을 생성.
+
 🔹 웹 인터페이스: 간단한 HTML 양식을 통해 손쉬운 상호작용 가능.
+
 🔹 확장 가능: 추가 기능을 추가하거나 외부 API와 통합 가능.
 
 ________________________________
