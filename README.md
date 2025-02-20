@@ -79,6 +79,7 @@ Open your browser and navigate to:
 
 필요한 라이브러리를 설치합니다:
 
+    touch requirements.txt
     pip install -r requirements.txt
 
 애플리케이션을 실행합니다:
