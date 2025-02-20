@@ -58,6 +58,7 @@ Clone the repository:
 
 Install the required libraries:
 
+    touch requirements.txt
     pip install -r requirements.txt
 
 Run the application:
