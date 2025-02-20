@@ -1,4 +1,4 @@
-# 💬 ChatBot Application 🤖
+# 🤖 ChatBot Application 💬
 
 A simple AI-powered chatbot built using Python, Flask, and Hugging
 Face's transformers library. The chatbot can respond to user inputs in
